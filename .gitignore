@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+
+artifacts/
+tmp_eval_test/
+
+# Scratch media and previews generated during development
+data/examples/
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

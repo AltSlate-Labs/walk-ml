@@ -1,0 +1,9 @@
+clip_path,user_id,session_id,camera_id,timestamp,quality_score
+clips/walking-bradford-5s_s1.npz,user_walking_bradford_5s,1,example_cam_1,,1.0
+clips/walking-bradford-5s_s2a.npz,user_walking_bradford_5s,2,example_cam_1,,1.0
+clips/walking-bradford-5s_s2b.npz,user_walking_bradford_5s,2,example_cam_1,,1.0
+clips/walking-bradford-5s_s3.npz,user_walking_bradford_5s,3,example_cam_1,,1.0
+clips/walking-kobuleti-5s_s1.npz,user_walking_kobuleti_5s,1,example_cam_1,,1.0
+clips/walking-kobuleti-5s_s2a.npz,user_walking_kobuleti_5s,2,example_cam_1,,1.0
+clips/walking-kobuleti-5s_s2b.npz,user_walking_kobuleti_5s,2,example_cam_1,,1.0
+clips/walking-kobuleti-5s_s3.npz,user_walking_kobuleti_5s,3,example_cam_1,,1.0
