@@ -43,6 +43,32 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Sample Walking Data
+
+A small real-video example dataset is included at:
+
+- `data/walking_examples/raw_videos/` (tiny `.mp4` clips)
+- `data/walking_examples/clips/` (extracted `.npz` clips)
+- `data/walking_examples/index.csv` (ready-to-use index)
+
+Quick start:
+
+```bash
+python scripts/extract_video_examples.py \
+  --video-dir data/walking_examples/raw_videos \
+  --output-root data/walking_examples \
+  --overwrite
+```
+
+Use it with:
+
+```bash
+python scripts/train.py \
+  --config configs/train_examples.yaml \
+  --data-root data/walking_examples \
+  --run-name walking-example
+```
+
 ## Data Format
 Create `index.csv` inside your dataset root (or point to it via config):
 

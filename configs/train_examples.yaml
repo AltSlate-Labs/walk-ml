@@ -1,0 +1,23 @@
+extends: train_mlx.yaml
+
+project:
+  artifacts_root: artifacts
+  seed: 42
+
+data:
+  index_file: index.csv
+  seq_len: 64
+  image_size: [128, 256]
+  min_quality: 0.0
+  train_sessions: ["1", "2"]
+  val_from_sessions: ["2"]
+  test_sessions: ["3"]
+  val_fraction: 0.5
+  batch_size: 4
+
+model:
+  seq_len: 64
+
+training:
+  epochs: 4
+  log_every: 1
