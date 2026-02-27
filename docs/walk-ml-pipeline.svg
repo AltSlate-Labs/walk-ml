@@ -1,0 +1,119 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5FAFF"/>
+      <stop offset="1" stop-color="#EFF4EA"/>
+    </linearGradient>
+    <linearGradient id="boxA" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="boxB" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#059669"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="boxC" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D97706"/>
+      <stop offset="1" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="boxD" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="7" refY="7" orient="auto-start-reverse">
+      <path d="M0,0 L14,7 L0,14 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <text x="600" y="58" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="32" font-weight="700" fill="#0F172A">
+    walk-ml pipeline
+  </text>
+  <text x="600" y="88" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="16" fill="#334155">
+    Closed-set gait identification with MLX training, testing, and thresholded evaluation
+  </text>
+
+  <rect x="70" y="140" width="230" height="170" rx="20" fill="url(#boxA)" filter="url(#shadow)"/>
+  <text x="185" y="178" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="20" font-weight="700" fill="white">
+    Data
+  </text>
+  <text x="185" y="208" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#DBEAFE">
+    index.csv + clips
+  </text>
+  <text x="185" y="232" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="13" fill="#DBEAFE">
+    .npz / .npy -> [T,H,W,C]
+  </text>
+  <text x="185" y="256" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="13" fill="#DBEAFE">
+    split by session
+  </text>
+  <rect x="118" y="274" width="134" height="24" rx="12" fill="white" fill-opacity="0.2"/>
+  <text x="185" y="291" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="12" font-weight="700" fill="#E2E8F0">
+    label: data_ingest
+  </text>
+
+  <rect x="345" y="140" width="230" height="170" rx="20" fill="url(#boxB)" filter="url(#shadow)"/>
+  <text x="460" y="178" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="20" font-weight="700" fill="white">
+    Train
+  </text>
+  <text x="460" y="208" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#D1FAE5">
+    python scripts/train.py
+  </text>
+  <text x="460" y="232" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="13" fill="#D1FAE5">
+    ArcFace + triplet loss
+  </text>
+  <text x="460" y="256" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="13" fill="#D1FAE5">
+    best_weights.npz
+  </text>
+  <rect x="393" y="274" width="134" height="24" rx="12" fill="white" fill-opacity="0.2"/>
+  <text x="460" y="291" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="12" font-weight="700" fill="#ECFDF5">
+    label: model_fit
+  </text>
+
+  <rect x="620" y="140" width="230" height="170" rx="20" fill="url(#boxC)" filter="url(#shadow)"/>
+  <text x="735" y="178" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="20" font-weight="700" fill="white">
+    Test
+  </text>
+  <text x="735" y="208" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#FFEDD5">
+    python scripts/test.py
+  </text>
+  <text x="735" y="232" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="13" fill="#FFEDD5">
+    centroid gallery matching
+  </text>
+  <text x="735" y="256" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="13" fill="#FFEDD5">
+    test_predictions.csv
+  </text>
+  <rect x="668" y="274" width="134" height="24" rx="12" fill="white" fill-opacity="0.2"/>
+  <text x="735" y="291" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="12" font-weight="700" fill="#FFF7ED">
+    label: inference
+  </text>
+
+  <rect x="895" y="140" width="230" height="170" rx="20" fill="url(#boxD)" filter="url(#shadow)"/>
+  <text x="1010" y="178" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="20" font-weight="700" fill="white">
+    Evaluate
+  </text>
+  <text x="1010" y="208" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" fill="#EDE9FE">
+    python scripts/evaluate.py
+  </text>
+  <text x="1010" y="232" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="13" fill="#EDE9FE">
+    FAR/FRR/EER + confusion
+  </text>
+  <text x="1010" y="256" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="13" fill="#EDE9FE">
+    model_card.md
+  </text>
+  <rect x="943" y="274" width="134" height="24" rx="12" fill="white" fill-opacity="0.2"/>
+  <text x="1010" y="291" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="12" font-weight="700" fill="#F5F3FF">
+    label: reporting
+  </text>
+
+  <path d="M300 225 H338" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M575 225 H613" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M850 225 H888" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="495" y="336" width="210" height="44" rx="22" fill="#0F172A"/>
+  <text x="600" y="363" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">
+    artifacts/&lt;run-name&gt;/...
+  </text>
+</svg>

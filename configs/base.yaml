@@ -1,0 +1,40 @@
+project:
+  artifacts_root: artifacts
+  seed: 42
+
+data:
+  index_file: index.csv
+  seq_len: 64
+  image_size: [128, 256]
+  min_quality: 0.0
+  train_sessions: ["1", "2"]
+  val_from_sessions: ["2"]
+  test_sessions: ["3"]
+  val_fraction: 0.2
+  batch_size: 16
+
+model:
+  input_channels: 3
+  seq_len: 64
+  hidden_dim: 512
+  embedding_dim: 256
+  num_classes: null
+
+loss:
+  arcface_margin: 0.35
+  arcface_scale: 16.0
+  triplet_margin: 0.2
+  id_weight: 0.7
+  triplet_weight: 0.3
+
+training:
+  epochs: 80
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  warmup_epochs: 5
+  log_every: 10
+  target_far: 0.01
+
+evaluation:
+  top_k: [1, 5]
+  target_far: 0.01

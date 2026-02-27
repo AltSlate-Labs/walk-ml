@@ -1,0 +1,14 @@
+{
+  "accept_rate": 1.0,
+  "eer": NaN,
+  "embedding_shape": null,
+  "far": 0.5,
+  "frr": 0.5,
+  "num_samples": 2,
+  "per_user_accuracy": {
+    "0": 1.0,
+    "1": 0.0
+  },
+  "threshold": 0.5,
+  "top1": 0.5
+}
