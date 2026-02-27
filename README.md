@@ -11,6 +11,8 @@ MLX-first gait identification pipeline for closed-set person recognition.
 
 `Labels:` `computer-vision` `gait-recognition` `closed-set-identification` `threshold-calibration`
 
+Architecture: [Architecture.md](Architecture.md)
+
 ## Highlights
 - End-to-end train -> test -> evaluate flow from simple CSV indexing.
 - Closed-set identification with centroid gallery matching.
